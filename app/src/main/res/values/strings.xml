@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">PubCrawlPlanner</string>
+    <string name="app_name">Pub-Crawl Planner</string>
+    <string name="max_kilometers">Max kilometers:</string>
+    <string name="aantal_cafes">Aantal cafés:</string>
+    <string name="plan_route_button_text">Plan route</string>
+
+    <string-array name="cafe_names">
+        <item>Startcafé A</item>
+        <item>Startcafé B</item>
+        <item>Startcafé C</item>
+    </string-array>
+
+
 </resources>

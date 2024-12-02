@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".MainActivity">
+
+    <!-- Titel -->
+<TextView
+android:id="@+id/tv_title"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="@string/app_name"
+android:textSize="28sp"
+    android:textStyle="bold"
+    android:textColor="#3E2723"
+    android:gravity="center"
+    android:layout_marginTop="32dp"
+    android:layout_marginBottom="24dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Dropdown voor startcafé -->
+<Spinner
+android:id="@+id/spinner_start_cafe"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:minHeight="48dp"
+android:background="@drawable/rounded_background"
+    android:padding="8dp"
+    app:layout_constraintTop_toBottomOf="@id/tv_title"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginBottom="16dp" />
+
+    <!-- Slider: Max kilometers -->
+<TextView
+android:id="@+id/tv_km_label"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="@string/max_kilometers"
+android:textSize="18sp"
+android:textColor="#3E2723"
+    android:layout_marginBottom="8dp"
+    app:layout_constraintTop_toBottomOf="@id/spinner_start_cafe"
+    app:layout_constraintStart_toStartOf="parent" />
+
+<SeekBar
+android:id="@+id/seekbar_km"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_marginBottom="16dp"
+android:padding="8dp"
+    app:layout_constraintTop_toBottomOf="@id/tv_km_label"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Slider: Aantal cafés -->
+<TextView
+android:id="@+id/tv_cafes_label"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="@string/aantal_cafes"
+android:textSize="18sp"
+android:textColor="#3E2723"
+android:layout_marginBottom="8dp"
+app:layout_constraintTop_toBottomOf="@id/seekbar_km"
+app:layout_constraintStart_toStartOf="parent" />
+
+<SeekBar
+android:id="@+id/seekbar_cafes"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_marginBottom="32dp"
+    android:padding="8dp"
+    app:layout_constraintTop_toBottomOf="@id/tv_cafes_label"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Route plannen knop -->
+<Button
+android:id="@+id/btn_plan_route"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="@string/plan_route_button_text"
+android:textSize="16sp"
+android:textColor="#FFFFFF"
+    android:background="@color/colorAccent"
+    android:layout_marginTop="24dp"
+    app:layout_constraintTop_toBottomOf="@id/seekbar_cafes"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:padding="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
